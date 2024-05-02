@@ -1,0 +1,32 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "Live FIAP sobre a diferença entre APIS Rest, GraphQL e gRCP",
+  "type": "module",
+  "scripts": {
+    "rest": "node --watch ./rest/index.js",
+    "graphql": "node --watch ./graphql/index.js",
+    "grpc": "node --watch ./gRPC/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "4.10.4",
+    "@grpc/grpc-js": "1.10.7",
+    "@grpc/proto-loader": "0.7.13",
+    "@grpc/reflection": "1.0.4",
+    "apollo-server": "3.13.0",
+    "apollo-server-express": "3.13.0",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "express": "4.19.2",
+    "graphql": "16.8.1",
+    "graphql-http": "1.22.1",
+    "pg": "8.11.5",
+    "prettier": "3.2.5"
+  },
+  "engines": {
+    "node": "v20.11.1"
+  }
+}

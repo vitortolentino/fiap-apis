@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package user;
+
+service User {
+  rpc CreateUser (CreateUserMessage) returns (UserMessage);
+  rpc ReadUser (UserId) returns (UserMessage);
+  rpc ReadUsers (VoidParam) returns (Users);
+  rpc UpdateUser(UserMessage) returns (UserMessage);
+  rpc DeleteUser (UserId) returns (VoidParam);
+}
+
+message VoidParam {}
+
+message UserId {
+  int32 id = 1;
+}
+
+message CreateUserMessage {
+  string name = 2;
+}
+
+message UserMessage {
+  int32 id = 1;
+  string name = 2;
+}
+
+message Users {
+  repeated UserMessage users = 1;
+}
